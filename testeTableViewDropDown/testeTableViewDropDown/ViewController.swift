@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableHeaderDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,8 +23,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let headerNib = UINib.init(nibName:"CustomHeaderView", bundle: Bundle.main)
-        tableView.register(headerNib, forCellReuseIdentifier: "CustomHeaderView")
+        let headerNib = UINib.init(nibName:"TableHeader", bundle: Bundle.main)
+        tableView.register(headerNib,forHeaderFooterViewReuseIdentifier: "TableHeader")
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,16 +58,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let header = ExpandableHeaderView()
-//        header.customInit(title: sections[section].typeBenefit, section: section, delegate: self)
-//
-//        return header
-        
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! CustomHeaderView
-        
-        headerView.imageCell.image = sections[section].imagem
-        headerView.labelCell.text = sections[section].typeBenefit
-        
+
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "TableHeader") as! TableHeader
+
+        headerView.customInit(image: sections[section].imagem, title: sections[section].typeBenefit , section: section, delegate: self)
+
         return headerView
     }
     
@@ -78,7 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    func toggleSection(header: ExpandableHeaderView, section: Int) {
+    func toggleSection(header: TableHeader, section: Int) {
         sections[section].expanded = !sections[section].expanded
         
         tableView.beginUpdates()

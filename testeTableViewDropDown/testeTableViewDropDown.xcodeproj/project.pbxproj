@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EBD74472078053100613A2C /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBD74452078053100613A2C /* CustomHeaderView.swift */; };
-		1EBD74482078053100613A2C /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBD74462078053100613A2C /* CustomHeaderView.xib */; };
+		1E599A4F207BE3B7003DCD4B /* TableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E599A4E207BE3B7003DCD4B /* TableHeader.xib */; };
+		1E599A51207BE418003DCD4B /* TableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E599A50207BE418003DCD4B /* TableHeader.swift */; };
 		1EF45D5D20779F5100072CBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF45D5C20779F5100072CBB /* AppDelegate.swift */; };
 		1EF45D5F20779F5100072CBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF45D5E20779F5100072CBB /* ViewController.swift */; };
 		1EF45D6220779F5100072CBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF45D6020779F5100072CBB /* Main.storyboard */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1EBD74452078053100613A2C /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
-		1EBD74462078053100613A2C /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
+		1E599A4E207BE3B7003DCD4B /* TableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableHeader.xib; sourceTree = "<group>"; };
+		1E599A50207BE418003DCD4B /* TableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeader.swift; sourceTree = "<group>"; };
 		1EF45D5920779F5100072CBB /* testeTableViewDropDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testeTableViewDropDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF45D5C20779F5100072CBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EF45D5E20779F5100072CBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,10 +79,10 @@
 		1EF45D6E2077A5DE00072CBB /* ExpandableHeader */ = {
 			isa = PBXGroup;
 			children = (
+				1E599A4E207BE3B7003DCD4B /* TableHeader.xib */,
+				1E599A50207BE418003DCD4B /* TableHeader.swift */,
 				1EF45D6F2077A63900072CBB /* Section.swift */,
 				1EF45D712077A65D00072CBB /* ExpandableHeaderView.swift */,
-				1EBD74452078053100613A2C /* CustomHeaderView.swift */,
-				1EBD74462078053100613A2C /* CustomHeaderView.xib */,
 			);
 			path = ExpandableHeader;
 			sourceTree = "<group>";
@@ -146,9 +146,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EBD74482078053100613A2C /* CustomHeaderView.xib in Resources */,
 				1EF45D6720779F5100072CBB /* LaunchScreen.storyboard in Resources */,
 				1EF45D6420779F5100072CBB /* Assets.xcassets in Resources */,
+				1E599A4F207BE3B7003DCD4B /* TableHeader.xib in Resources */,
 				1EF45D6220779F5100072CBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,9 +162,9 @@
 			files = (
 				1EF45D702077A63900072CBB /* Section.swift in Sources */,
 				1EF45D722077A65D00072CBB /* ExpandableHeaderView.swift in Sources */,
+				1E599A51207BE418003DCD4B /* TableHeader.swift in Sources */,
 				1EF45D742077AE5400072CBB /* cellBenefit.swift in Sources */,
 				1EF45D5F20779F5100072CBB /* ViewController.swift in Sources */,
-				1EBD74472078053100613A2C /* CustomHeaderView.swift in Sources */,
 				1EF45D5D20779F5100072CBB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
